@@ -5,7 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/css/custom-style.css">
-    <title>Document</title>
+    <style>
+        @media only screen and (max-width: 768px) {
+            /* For mobile phones: */
+            [class*="col-"] {
+                width: 100%;
+            }
+        }
+
+        .flex-container {
+    display: flex;
+    justify-content: center;
+}
+    </style>
+    <title>Visionary Media Artist Production</title>
 </head>
 
 <body>
@@ -15,19 +28,20 @@
         <nav id="nav-bar">
             <a class="nav-link" href="#learn-more">Learn More</a>
             <a class="nav-link" href="#links">Personal Links</a>
-            <a class="nav-link" href="#contact-us">Contact Us</a>
+            <a class="nav-link" href="#contact-us">Request Knowledge Archive</a>
             </nav>
         </center>
     </header>
     <section id="learn-more">
         <center>
-        <h1>Visionary Media Artist Production Landing Page</h1>   
+        <h1>Visionary Media Artist Production</h1>   
        <iframe id="video" width="560" height="315" src="https://fiverr-res.cloudinary.com/video/upload/t_fiverr_hd/g3bxkt01bpaekmdgvaaz" frameborder="0" allow="accelermter; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
        </center>
     </section>
     <section id="contact-us">
         <center>
-        <form id="form"action="https://www.freecodecamp.com/email-submit">
+            <h1>Request Knowledge Archive link</h1>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
             <input id="email" type="email" placeholder="you@whatever.com" name="email"></input>
             <input id="submit" type="submit"></input>
         </form>
@@ -35,11 +49,27 @@
     </section>
     <section id="links">
         <div class="flex-container">
-            <div>BTC Address</div>
-            <div>ETH Address</div>
-            <div>Amazon wishlish</div>
+            <div><a href="#">BTC Address</a></div>
+            <div><a href="#">BTC Address</a></div>
+            <div><a href="#">Support with ETH</a></div>
           </div>
     </section>
 </body>
 <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+<script>
+    window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("header");
+var sticky = header.offsetTop;
+
+function myFunction() {
+    console.log('scroll triggered')
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+
+</script>
 </html> 
